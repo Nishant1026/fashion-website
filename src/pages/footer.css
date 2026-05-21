@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+  width: 100%;
+  padding: 110px 0 30px;
+
+  background:
+    radial-gradient(circle at top right,
+    rgba(197,157,73,0.08),
+    transparent 30%),
+
+    linear-gradient(
+      180deg,
+      #12070b 0%,
+      #090406 100%
+    );
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* GLOW */
+.footer::before{
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: rgba(197,157,73,0.08);
+  border-radius: 50%;
+  top: -180px;
+  right: -180px;
+  filter: blur(120px);
+}
+
+/* =========================
+   TOP
+========================= */
+
+.footer-top{
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
+  gap: 60px;
+
+  position: relative;
+  z-index: 5;
+
+  padding-bottom: 70px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* BRAND */
+.footer-brand h1{
+  color: #fff;
+  font-size: 3rem;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 18px;
+}
+
+.footer-brand p{
+  color: rgba(255,255,255,0.65);
+  line-height: 1.9;
+  font-size: 1.09rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* LINKS */
+.footer-links h3,
+.footer-newsletter h3{
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.footer-links{
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links a{
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  margin-bottom: 16px;
+  transition: 0.35s ease;
+  font-size: 1.09rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-links a:hover{
+  color: #c59d49;
+  transform: translateX(3px);
+  opacity: 0.9;
+}
+
+/* NEWSLETTER */
+.footer-newsletter p{
+  color: rgba(255,255,255,0.65);
+  line-height: 1.8;
+  margin-bottom: 24px;
+  font-size: 1.09rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-newsletter form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-newsletter input{
+  width: 100%;
+  height: 58px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.05);
+
+  border-radius: 16px;
+  padding: 0 20px;
+
+  color: #fff;
+  outline: none;
+
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+
+  backdrop-filter: blur(10px);
+}
+
+.footer-newsletter input::placeholder{
+  color: rgba(255,255,255,0.45);
+}
+
+.footer-newsletter button{
+  height: 56px;
+  border: none;
+  border-radius: 16px;
+
+  background: linear-gradient(135deg,#c59d49,#e0bb70);
+  color: #111;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.35s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-newsletter button:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(197,157,73,0.18);
+}
+
+/* =========================
+   BOTTOM
+========================= */
+
+.footer-bottom{
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+
+  padding-top: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.footer-bottom p{
+  color: rgba(255,255,255,0.55);
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* =========================
+   SOCIAL ICONS (LUXURY FIX)
+========================= */
+
+.footer-socials{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-socials a{
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+
+  color: rgba(255,255,255,0.75);
+
+  font-size: 27px;
+
+  transition: all 0.3s ease;
+
+  backdrop-filter: blur(10px);
+}
+
+/* ✅ SUBTLE HOVER (LUXURY STYLE) */
+.footer-socials a:hover{
+  background: rgba(197,157,73,0.15);
+  border-color: rgba(197,157,73,0.4);
+  color: #c59d49;
+
+  transform: translateY(-2px) scale(1.05);
+
+  box-shadow: 0 6px 15px rgba(197,157,73,0.12);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1100px){
+  .footer-top{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media(max-width:768px){
+  .footer{
+    padding: 90px 0 25px;
+  }
+
+  .footer-top{
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding-bottom: 50px;
+  }
+
+  .footer-bottom{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-socials{
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media(max-width:480px){
+  .footer-brand h1{
+    font-size: 2.4rem;
+  }
+
+  .footer-links h3,
+  .footer-newsletter h3{
+    font-size: 1.3rem;
+  }
+}

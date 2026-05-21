@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* =========================
+   HIGHLIGHT SECTION
+========================= */
+
+.highlight{
+  width: 100%;
+  padding: 130px 0;
+
+  /* SLIGHTLY DIFFERENT FROM ABOUT */
+  background:
+    linear-gradient(
+      180deg,
+      #f4ede3 0%,
+      #f8f3eb 50%,
+      #f1e7db 100%
+    );
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* SOFT LUXURY GLOW */
+
+.highlight::before{
+  content: '';
+
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  background: rgba(197,157,73,0.10);
+
+  border-radius: 50%;
+
+  top: -180px;
+  right: -180px;
+
+  filter: blur(120px);
+}
+
+.highlight::after{
+  content: '';
+
+  position: absolute;
+
+  width: 400px;
+  height: 400px;
+
+  background: rgba(93,14,36,0.04);
+
+  border-radius: 50%;
+
+  bottom: -180px;
+  left: -180px;
+
+  filter: blur(120px);
+}
+
+/* =========================
+   TOP CONTENT
+========================= */
+
+.highlight-top{
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 5;
+}
+
+.highlight-subtitle{
+  color: #c59d49;
+  letter-spacing: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.highlight-top h1{
+  font-size: clamp(3rem,5vw,5rem);
+  line-height: 1;
+  color: #1d1d1d;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 25px;
+}
+
+.highlight-line{
+  width: 120px;
+  height: 2px;
+
+  background: linear-gradient(
+    to right,
+    #c59d49,
+    transparent
+  );
+
+  display: block;
+  margin: auto;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.highlight-container{
+  width: 90%;
+  max-width: 1350px;
+
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+
+  gap: 28px;
+
+  position: relative;
+  z-index: 5;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.highlight-card{
+  position: relative;
+
+  height: 540px;
+
+  overflow: hidden;
+
+  border-radius: 32px;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.10);
+
+  transition: 0.5s ease;
+
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
+.highlight-card:hover{
+  transform: translateY(-12px);
+  box-shadow:
+    0 30px 70px rgba(0,0,0,0.15);
+}
+
+/* IMAGE */
+
+.highlight-card img{
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: 0.8s ease;
+}
+
+.highlight-card:hover img{
+  transform: scale(1.08);
+}
+
+/* DARK OVERLAY */
+
+.highlight-overlay{
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.82),
+    rgba(0,0,0,0.18),
+    transparent
+  );
+}
+
+/* CONTENT */
+
+.highlight-content{
+  position: absolute;
+
+  left: 35px;
+  bottom: 35px;
+
+  z-index: 5;
+}
+
+.highlight-content span{
+  color: #e0bb70;
+
+  font-size: 0.85rem;
+
+  letter-spacing: 3px;
+
+  display: block;
+
+  margin-bottom: 10px;
+}
+
+.highlight-content h2{
+  color: #fff;
+
+  font-size: 2.2rem;
+
+  line-height: 1.1;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+
+.highlight-content button{
+  padding: 13px 28px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.14);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  color: #fff;
+
+  font-size: 0.88rem;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  border: 1px solid rgba(255,255,255,0.18);
+
+  transition: 0.4s ease;
+}
+
+.highlight-content button:hover{
+  background: #c59d49;
+  color: #1d1d1d;
+
+  transform: translateY(-3px);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:1200px){
+
+  .highlight-container{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+  .highlight{
+    padding: 100px 0;
+  }
+
+  .highlight-top{
+    margin-bottom: 55px;
+  }
+
+  .highlight-container{
+    grid-template-columns: 1fr;
+  }
+
+  .highlight-card{
+    height: 500px;
+  }
+
+  .highlight-content h2{
+    font-size: 2rem;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .highlight-top h1{
+    font-size: 2.4rem;
+  }
+
+  .highlight-subtitle{
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+  }
+
+  .highlight-card{
+    height: 430px;
+  }
+
+  .highlight-content{
+    left: 25px;
+    bottom: 25px;
+  }
+
+  .highlight-content h2{
+    font-size: 1.7rem;
+  }
+
+}
