@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './nav.css'
 
 function Nav() {
@@ -22,12 +23,29 @@ function Nav() {
 
           {/* NAV LINKS */}
           <ul className={menuOpen ? 'nav-links active' : 'nav-links'}>
-            <li><a href='#'>Home</a></li>
-            <li><a href='#'>Shop</a></li>
-            <li><a href='#'>Men</a></li>
-            <li><a href='#'>Women</a></li>
-            <li><a href='#'>Collection</a></li>
-            <li><a href='#'>Contact</a></li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+
+            <li>
+              <Link to="/women">Women</Link>
+            </li>
+
+            <li>
+              <Link to="/men">Men</Link>
+            </li>
+
+            <li>
+              <Link to="/shop">Shop</Link>
+            </li>
+
+            <li>
+              <Link to="/collection">Collection</Link>
+            </li>
+
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
 
             {/* MOBILE BUTTONS */}
             <li className='mobile-buttons'>
